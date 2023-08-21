@@ -125,6 +125,13 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
+  const sendAnalytics = () => {
+    typeof window !== 'undefined' &&
+      window.gtag('event', 'click', {
+        clicked_on: 'my_image_wow!',
+      });
+  };
+
   const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Node.js', 'React Native', 'Flutter'];
 
   return (
@@ -150,7 +157,7 @@ const About = () => {
         </StyledText>
 
         <StyledPic>
-          <div className="wrapper">
+          <div className="wrapper" onMouseEnter={sendAnalytics}>
             <StaticImage
               className="img"
               src="../../images/me.jpg"

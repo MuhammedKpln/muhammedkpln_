@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Icon } from '@components/icons';
+import { srConfig } from '@config';
+import { usePrefersReducedMotion } from '@hooks';
+import sr from '@utils/sr';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
+import React, { useEffect, useRef, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { srConfig } from '@config';
-import sr from '@utils/sr';
-import { Icon } from '@components/icons';
-import { usePrefersReducedMotion } from '@hooks';
 
 const StyledProjectsSection = styled.section`
   display: flex;
@@ -224,19 +225,23 @@ const Projects = () => {
             </div>
             <div className="project-links">
               {github && (
-                <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
+                <OutboundLink
+                  href={github}
+                  aria-label="GitHub Link"
+                  target="_blank"
+                  rel="noreferrer">
                   <Icon name="GitHub" />
-                </a>
+                </OutboundLink>
               )}
               {external && (
-                <a
+                <OutboundLink
                   href={external}
                   aria-label="External Link"
                   className="external"
                   target="_blank"
                   rel="noreferrer">
                   <Icon name="External" />
-                </a>
+                </OutboundLink>
               )}
             </div>
           </div>

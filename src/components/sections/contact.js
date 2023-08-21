@@ -1,6 +1,7 @@
 import { email, srConfig } from '@config';
 import { usePrefersReducedMotion } from '@hooks';
 import sr from '@utils/sr';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
@@ -62,10 +63,9 @@ const Contact = () => {
       <p>
         Whether you have a question or just want to say hi, I’ll try my best to get back to you!
       </p>
-
-      <a className="email-link" href={`mailto:${email}`}>
+      <OutboundLink className="email-link" href={`mailto:${email}`}>
         Say Hello
-      </a>
+      </OutboundLink>
     </StyledContactSection>
   );
 };

@@ -3,6 +3,7 @@ import { srConfig } from '@config';
 import { usePrefersReducedMotion } from '@hooks';
 import sr from '@utils/sr';
 import { graphql, useStaticQuery } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
@@ -364,7 +365,7 @@ const Featured = () => {
                     <p className="project-overline">Featured Project</p>
 
                     <h3 className="project-title">
-                      <a href={external}>{title}</a>
+                      <OutboundLink href={external}>{title}</OutboundLink>
                     </h3>
 
                     <div
@@ -382,14 +383,17 @@ const Featured = () => {
 
                     <div className="project-links">
                       {github && (
-                        <a href={github} aria-label="GitHub Link">
+                        <OutboundLink href={github} aria-label="GitHub Link">
                           <Icon name="GitHub" />
-                        </a>
+                        </OutboundLink>
                       )}
                       {external && (
-                        <a href={external} aria-label="External Link" className="external">
+                        <OutboundLink
+                          href={external}
+                          aria-label="External Link"
+                          className="external">
                           <Icon name="External" />
-                        </a>
+                        </OutboundLink>
                       )}
                     </div>
                   </div>

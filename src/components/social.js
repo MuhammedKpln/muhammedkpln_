@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { socialMedia } from '@config';
 import { Side } from '@components';
 import { Icon } from '@components/icons';
-
+import { socialMedia } from '@config';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
+import PropTypes from 'prop-types';
+import React from 'react';
+import styled from 'styled-components';
 const StyledSocialList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -49,9 +49,9 @@ const Social = ({ isHome }) => (
       {socialMedia &&
         socialMedia.map(({ url, name }, i) => (
           <li key={i}>
-            <a href={url} aria-label={name} target="_blank" rel="noreferrer">
+            <OutboundLink href={url} aria-label={name} target="_blank" rel="noreferrer">
               <Icon name={name} />
-            </a>
+            </OutboundLink>
           </li>
         ))}
     </StyledSocialList>
