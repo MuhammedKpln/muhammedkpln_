@@ -8,15 +8,15 @@ module.exports = {
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/muhammedkpln_',
+      url: 'https://www.instagram.com/muhammedkplnn_',
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/muhammedkpln',
+      url: 'https://twitter.com/MuhammedKplnn',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/muhammedkpln',
+      url: 'https://www.linkedin.com/in/muhammedkpln/',
     },
     {
       name: 'Codepen',
