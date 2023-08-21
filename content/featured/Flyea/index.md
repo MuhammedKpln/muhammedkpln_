@@ -3,6 +3,7 @@ date: '3'
 title: 'Flyea'
 cover: './flyea.png'
 github: 'https://github.com/muhammedkpln/fileshare'
+external: 'https://github.com/muhammedkpln/fileshare'
 tech:
   - Flutter
 ---

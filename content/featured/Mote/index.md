@@ -3,6 +3,7 @@ date: '1'
 title: 'Mote'
 cover: './mote.png'
 github: 'https://github.com/muhammedkpln/mote'
+external: 'https://github.com/muhammedkpln/mote'
 tech:
   - React / NextJS
   - Typescript

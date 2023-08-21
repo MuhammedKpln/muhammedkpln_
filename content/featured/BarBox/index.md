@@ -3,6 +3,7 @@ date: '4'
 title: 'BarBox'
 cover: './barbox.png'
 github: 'https://github.com/muhammedkpln/barbox'
+external: 'https://github.com/muhammedkpln/barbox'
 tech:
   - Flutter
 ---
