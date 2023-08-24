@@ -94,6 +94,7 @@ const StyledProject = styled.li`
       align-items: center;
       margin-right: -10px;
       color: var(--light-slate);
+      flex-direction: flex-end;
 
       a {
         ${({ theme }) => theme.mixins.flexCenter};
