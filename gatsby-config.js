@@ -167,5 +167,11 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-plausible',
+      options: {
+        domain: 'analytics.hasanisabbah.duckdns.org',
+      },
+    },
   ],
 };
