@@ -55,12 +55,11 @@ const Head = ({ title, description, image }) => {
       <script
         defer
         data-domain="muhammedkaplan.com"
-        src="https://analytics.hasanisabbah.duckdns.org/js/script.js"></script>
-
-      <script
-        defer
-        data-domain="muhammedkaplan.com"
-        src="https://analytics.hasanisabbah.duckdns.org/js/script.outbound-links.js"></script>
+        src="https://analytics.hasanisabbah.duckdns.org/js/script.tagged-events.outbound-links.js"></script>
+      <script>
+        window.plausible = window.plausible || function(){' '}
+        {(window.plausible.q = window.plausible.q || []).push()}
+      </script>
     </Helmet>
   );
 };

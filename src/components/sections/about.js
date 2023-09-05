@@ -2,7 +2,7 @@ import { srConfig } from '@config';
 import { usePrefersReducedMotion } from '@hooks';
 import sr from '@utils/sr';
 import { StaticImage } from 'gatsby-plugin-image';
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const StyledAboutSection = styled.section`
@@ -125,13 +125,11 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const sendAnalytics = () => {
-    typeof window !== 'undefined' &&
-      window.gtag('event', 'click', {
-        clicked_on: 'my_image_wow!',
-      });
-  };
-
+  const sendAnalytics = useCallback(() => {
+    if (window.plausible !== undefined) {
+      window.plausible('Show Picture');
+    }
+  }, []);
   const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Node.js', 'React Native', 'Flutter'];
 
   return (
