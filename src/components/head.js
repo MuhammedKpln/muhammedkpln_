@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
 // https://www.gatsbyjs.com/docs/add-seo-component/
 
@@ -56,6 +56,11 @@ const Head = ({ title, description, image }) => {
         defer
         data-domain="muhammedkaplan.com"
         src="https://analytics.hasanisabbah.duckdns.org/js/script.js"></script>
+
+      <script
+        defer
+        data-domain="muhammedkaplan.com"
+        src="https://analytics.hasanisabbah.duckdns.org/js/script.outbound-links.js"></script>
     </Helmet>
   );
 };
