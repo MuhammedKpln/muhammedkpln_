@@ -1,10 +1,10 @@
 ---
-date: '2020-06-20'
+date: '5'
 title: 'Socium'
-github: 'https://github.com/MuhammedKpln/socium'
+cover: './socium.png'
+github: 'https://github.com/MuhammedKpln/sociumflutter'
 tech:
-  - React Native
-showInProjects: true
+  - Flutter
 ---
 
 Socium application is the easiest way to chat with people anonymously.
